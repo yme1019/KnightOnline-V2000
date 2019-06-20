@@ -19,7 +19,7 @@ The goal of this project is to replicate official client functionality while pre
 We may deviate in some minor aspects where it makes sense to fix, for example, UI behaviour, or to provide the user with error messages where the client may not officially do so, but these changes do not affect compatibility while improving the user experience. Pull requests for such changes will be accepted on a case-by-case basis.
 
 ------------------------------------------------------------------------------------------------------------------------------------
-Usko Client : https://www.mediafire.com/file/jvz3j3g3d81d9ec/KnightOnlineEn_Usko_V2000.rar/file
+Usko Client : http://www.mediafire.com/file/jvz3j3g3d81d9ec/KnightOnlineEn_Usko_V2000.rar/file
 ------------------------------------------------------------------------------------------------------------------------------------
-DB : https://www.mediafire.com/file/x6x145z4zqwbhzl/KO_1299.rar/file
+DB : http://www.mediafire.com/file/x6x145z4zqwbhzl/KO_1299.rar/file
 ------------------------------------------------------------------------------------------------------------------------------------
