@@ -12,3 +12,5 @@ This code is for academic purposes only! If you have questions, or would like he
 
 Note:
 The UIE project currently requires VS15 pro
+
+Usko Client :
