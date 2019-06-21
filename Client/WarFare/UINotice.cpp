@@ -49,11 +49,8 @@ bool CUINotice::Load(HANDLE hFile)
 
 bool CUINotice::ReceiveMessage(CN3UIBase* pSender, uint32_t dwMsg)
 {
-	if(NULL == pSender) return false;
-
-	//s_CameraData.vp;  //불러 오는 과정을 살펴본다 
-	//uint32_t mm = s_CameraData.vp.Height;
-	//uint32_t ss = s_CameraData.vp.Width;	
+	if(NULL == pSender) 
+		return false;
 
 	if (dwMsg == UIMSG_BUTTON_CLICK)
 	{
@@ -76,7 +73,8 @@ bool CUINotice::ReceiveMessage(CN3UIBase* pSender, uint32_t dwMsg)
 
 void CUINotice::GenerateText()
 {
-	if(NULL == m_pText_Notice) return;
+	if(NULL == m_pText_Notice) 
+		return;
 	
 	int iTextLen = 0;
 	it_String it = m_Texts.begin(), itEnd = m_Texts.end();

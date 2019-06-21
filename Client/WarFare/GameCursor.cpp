@@ -30,7 +30,8 @@ bool CGameCursor::Load(HANDLE hFile)
 	{
 		sprintf(szBuf,"Image_Cursor%.2d",i);
 
-		m_pImageCursor[i] = (CN3UIImage*)(this->GetChildByID(szBuf));	__ASSERT(m_pImageCursor[i], "NULL UI Component!!!");
+		m_pImageCursor[i] = (CN3UIImage*)(this->GetChildByID(szBuf));	
+		__ASSERT(m_pImageCursor[i], "m_pImageCursor NULL UI Component!!!");
 	}
 	return true;
 }

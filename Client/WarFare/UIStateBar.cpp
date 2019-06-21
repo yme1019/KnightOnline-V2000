@@ -122,15 +122,15 @@ bool CUIStateBar::Load(HANDLE hFile)
 	}
 
 	m_pText_Position =	(CN3UIString*)(this->GetChildByID("Text_Position"));	
-	__ASSERT(m_pText_Position, "NULL UI Component!!");
+	__ASSERT(m_pText_Position, "m_pText_Position NULL UI Component!!");
 	m_pProgress_HP =	(CN3UIProgress*)(this->GetChildByID("Progress_HP"));	
-	__ASSERT(m_pProgress_HP, "NULL UI Component!!");
+	__ASSERT(m_pProgress_HP, "m_pProgress_HP NULL UI Component!!");
 	m_pProgress_MSP =	(CN3UIProgress*)(this->GetChildByID("Progress_MSP"));	
-	__ASSERT(m_pProgress_MSP, "NULL UI Component!!");
+	__ASSERT(m_pProgress_MSP, "m_pProgress_MSP NULL UI Component!!");
 	m_pProgress_ExpC =	(CN3UIProgress*)(this->GetChildByID("Progress_ExpC"));	
-	__ASSERT(m_pProgress_ExpC, "NULL UI Component!!");
+	__ASSERT(m_pProgress_ExpC, "m_pProgress_ExpC NULL UI Component!!");
 	m_pProgress_ExpP =	(CN3UIProgress*)(this->GetChildByID("Progress_ExpP"));	
-	__ASSERT(m_pProgress_ExpP, "NULL UI Component!!");
+	__ASSERT(m_pProgress_ExpP, "m_pProgress_ExpP NULL UI Component!!");
 	
 	if(m_pProgress_HP) m_pProgress_HP->SetRange(0, 100);
 	if(m_pProgress_MSP) m_pProgress_MSP->SetRange(0, 100);
@@ -139,18 +139,16 @@ bool CUIStateBar::Load(HANDLE hFile)
 
 	// NOTE: new components not previously used
 
-	//CN3UIProgress* m_pProgress_HP_poison = (CN3UIProgress*)(this->GetChildByID("Progress_HP_poison"));	__ASSERT(m_pProgress_HP_poison, "NULL UI Component!!");
 	CN3UIProgress* m_pProgress_HP_poison = (CN3UIProgress*)(this->GetChildByID("Progress_HP_slow"));
-	__ASSERT(m_pProgress_HP_poison, "NULL UI Component!!");
+	__ASSERT(m_pProgress_HP_poison, "m_pProgress_HP_poison NULL UI Component!!");
 	if (m_pProgress_HP_poison)
 	{
 		m_pProgress_HP_poison->SetRange(0, 100);
 		m_pProgress_HP_poison->SetVisible(false);
 	}
 
-	//CN3UIProgress* m_pProgress_HP_curse = (CN3UIProgress*)(this->GetChildByID("Progress_HP_curse"));	__ASSERT(m_pProgress_HP_curse, "NULL UI Component!!");
 	CN3UIProgress* m_pProgress_HP_curse = (CN3UIProgress*)(this->GetChildByID("Progress_HP_drop"));
-	__ASSERT(m_pProgress_HP_curse, "NULL UI Component!!");
+	__ASSERT(m_pProgress_HP_curse, "m_pProgress_HP_curse NULL UI Component!!");
 	if (m_pProgress_HP_curse) 
 	{
 		m_pProgress_HP_curse->SetRange(0, 100);
@@ -158,7 +156,7 @@ bool CUIStateBar::Load(HANDLE hFile)
 	}
 
 	CN3UIProgress* m_pProgress_HP_lasting = (CN3UIProgress*)(this->GetChildByID("Progress_HP_lasting"));
-	__ASSERT(m_pProgress_HP_curse, "NULL UI Component!!");
+	__ASSERT(m_pProgress_HP_curse, "m_pProgress_HP_curse NULL UI Component!!");
 	if (m_pProgress_HP_lasting) 
 	{
 		m_pProgress_HP_lasting->SetRange(0, 100);
@@ -167,11 +165,11 @@ bool CUIStateBar::Load(HANDLE hFile)
 
 	// NOTE: new components to display the text
 	m_pText_HP = (CN3UIString*)GetChildByID("Text_HP");
-	__ASSERT(m_pText_HP, "NULL UI Component!!");
+	__ASSERT(m_pText_HP, "m_pText_HP NULL UI Component!!");
 	m_pText_MP = (CN3UIString*)GetChildByID("Text_MSP");
-	__ASSERT(m_pText_MP, "NULL UI Component!!");
+	__ASSERT(m_pText_MP, "m_pText_MP NULL UI Component!!");
 	m_pText_Exp = (CN3UIString*)GetChildByID("Text_ExpP");
-	__ASSERT(m_pText_Exp, "NULL UI Component!!");
+	__ASSERT(m_pText_Exp, "m_pText_Exp NULL UI Component!!");
 
 	CN3UIString* m_pText_SysTime = (CN3UIString*)GetChildByID("SystemTime");
 	if (m_pText_SysTime) m_pText_SysTime->SetVisible(false);
@@ -180,17 +178,17 @@ bool CUIStateBar::Load(HANDLE hFile)
 
 	// MiniMap
 	m_pGroup_MiniMap = GetChildByID("Group_MiniMap"); 
-	__ASSERT(m_pGroup_MiniMap, "NULL UI Component!!");
+	__ASSERT(m_pGroup_MiniMap, "m_pGroup_MiniMap NULL UI Component!!");
 
 	if(m_pGroup_MiniMap)
 	{
 		m_pGroup_MiniMap->SetVisible(false);
 		m_pImage_Map =		(CN3UIImage*)(m_pGroup_MiniMap->GetChildByID("Img_MiniMap"));	
-		__ASSERT(m_pImage_Map, "NULL UI Component!!");
+		__ASSERT(m_pImage_Map, "m_pImage_Map NULL UI Component!!");
 		m_pBtn_ZoomIn =		(CN3UIButton*)(m_pGroup_MiniMap->GetChildByID("Btn_ZoomIn"));	
-		__ASSERT(m_pBtn_ZoomIn, "NULL UI Component!!");
+		__ASSERT(m_pBtn_ZoomIn, "m_pBtn_ZoomIn NULL UI Component!!");
 		m_pBtn_ZoomOut =	(CN3UIButton*)(m_pGroup_MiniMap->GetChildByID("Btn_ZoomOut"));	
-		__ASSERT(m_pBtn_ZoomOut, "NULL UI Component!!");
+		__ASSERT(m_pBtn_ZoomOut, "m_pBtn_ZoomOut NULL UI Component!!");
 	}
 
 	m_pBtn_Quest = (CN3UIButton*)(GetChildByID("btn_quest"));

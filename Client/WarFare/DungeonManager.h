@@ -1,7 +1,3 @@
-// DungeonManager.h: interface for the CDungeonManager class.
-//
-//////////////////////////////////////////////////////////////////////
-
 #if !defined(AFX_DUNGEONMANAGER_H__492B3E57_9A05_4F4D_B98C_63CB6ACC572E__INCLUDED_)
 #define AFX_DUNGEONMANAGER_H__492B3E57_9A05_4F4D_B98C_63CB6ACC572E__INCLUDED_
 
@@ -23,8 +19,6 @@ class CDungeonManager : public CN3WorldBase
 	void InitWorld(int iZoneID, const __Vector3& vPosPlayer);
 	void Tick();
 
-//////////////////////////////////////////////////////////////////////
-
 	CN3Terrain* GetTerrainRef();
 	CN3SkyMng* GetSkyRef();
 
@@ -45,12 +39,7 @@ class CDungeonManager : public CN3WorldBase
 	float GetHeightWithShape(float fX, float fZ, __Vector3* pvNormal = NULL); 
 	CN3Shape* ShapeGetByIDWithShape(int iID);
 	CN3Shape* PickWithShape(int iXScreen, int iYScreen, bool bMustHaveEvent, __Vector3* pvPick = NULL);
-	bool CheckCollisionWithShape(	const __Vector3& vPos,				 // 충돌 위치
-														const __Vector3& vDir,				   // 방향 벡터
-														float fSpeedPerSec,					    // 초당 움직이는 속도
-														__Vector3* pvCol = NULL,			 // 충돌 지점
-														__Vector3* pvNormal = NULL,		 // 충돌한면의 법선벡터
-														__Vector3* pVec = NULL);			// 충돌한 면 의 폴리곤 __Vector3[3]
+	bool CheckCollisionWithShape(	const __Vector3& vPos, const __Vector3& vDir, float fSpeedPerSec, __Vector3* pvCol = NULL,__Vector3* pvNormal = NULL,__Vector3* pVec = NULL);			
 
 	// Rendering..
 	void RenderTerrain();
@@ -59,7 +48,6 @@ class CDungeonManager : public CN3WorldBase
 public:
 	CDungeonManager();
 	virtual ~CDungeonManager();
-
 };
 
-#endif // !defined(AFX_DUNGEONMANAGER_H__492B3E57_9A05_4F4D_B98C_63CB6ACC572E__INCLUDED_)
+#endif

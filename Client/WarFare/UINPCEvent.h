@@ -1,13 +1,9 @@
-// UINPCEvent.h: interface for the UINPCEvent class.
-//
-//////////////////////////////////////////////////////////////////////
-
 #if !defined(AFX_UINPCEVENT_H__27F6610C_5D61_4A22_97F2_93211B77BF9C__INCLUDED_)
 #define AFX_UINPCEVENT_H__27F6610C_5D61_4A22_97F2_93211B77BF9C__INCLUDED_
 
 #if _MSC_VER > 1000
 #pragma once
-#endif // _MSC_VER > 1000
+#endif
 
 #include "GameDef.h"
 
@@ -16,8 +12,6 @@
 #include "N3UIString.h"
 
 enum e_NpcEvent	{ NPC_EVENT_ITEM_TRADE = 0, NPC_EVENT_TRADE_REPAIR = 1, NPC_EVENT_KNIGHTS = 2 };
-
-//////////////////////////////////////////////////////////////////////
 
 
 class CUINPCEvent   : public CN3UIBase  
@@ -43,4 +37,4 @@ public:
 	void Close();
 };
 
-#endif // !defined(AFX_UINPCEVENT_H__27F6610C_5D61_4A22_97F2_93211B77BF9C__INCLUDED_)
+#endif 

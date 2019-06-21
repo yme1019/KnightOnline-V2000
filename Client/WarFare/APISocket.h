@@ -1,13 +1,9 @@
-// APISocket.h: interface for the CAPISocket class.
-//
-//////////////////////////////////////////////////////////////////////
-
 #if !defined(AFX_APISOCKET_H__31D58152_3B8D_4CBD_BEB9_6BE23C4F0FFB__INCLUDED_)
 #define AFX_APISOCKET_H__31D58152_3B8D_4CBD_BEB9_6BE23C4F0FFB__INCLUDED_
 
 #if _MSC_VER > 1000
 #pragma once
-#endif // _MSC_VER > 1000
+#endif
 
 #include "My_3DStruct.h"
 #include "N3Base.h"
@@ -17,9 +13,9 @@
 #include <string>
 
 #define WM_SOCKETMSG	(WM_USER+1)
-#define RECEIVE_BUF_SIZE	262144 // 최대 버퍼..
+#define RECEIVE_BUF_SIZE	262144 
 
-#define _CRYPTION		// 암호화 사용
+#define _CRYPTION		
 #ifdef _CRYPTION
 #include "shared/JvCryption.h"
 #endif
@@ -48,9 +44,6 @@ public:
 	{
 		if (len<=0)
 		{
-	#ifdef _DEBUG
-			//OutputDebugString("BB_CircularBuffer::PutData len is <= 0\n");
-	#endif
 			return;
 		}
 		while (IsOverFlowCondition(len)) BufferResize();
@@ -117,7 +110,6 @@ public:
 	}
 	uint8_t&	GetHeadData(){return m_pBuffer[m_iHeadPos];}
 	//1 Byte Operation;
-	//false : 모든데이터 다빠짐, TRUE: 정상적으로 진행중
 	BOOL	HeadIncrease(int increasement=1)
 	{
 		__ASSERT(increasement<=GetValidCount(),"1");
@@ -216,8 +208,6 @@ protected:
 #ifdef _DEBUG
 	__SocketStatisics m_Statistics_Send_Sum[255];
 	__SocketStatisics m_Statistics_Recv_Sum[255];
-//	std::vector<__SocketStatisics> m_Statistics_Send[255];
-//	std::vector<__SocketStatisics> m_Statistics_Recv[255];
 #endif
 
 
@@ -227,7 +217,7 @@ public:
 	int					m_iSendByteCount;
 	std::queue<Packet *> m_qRecvPkt;
 
-	BOOL	m_bEnableSend; // 보내기 가능..?
+	BOOL	m_bEnableSend;
 public:
 	int		Connect(HWND hWnd, const char* pszIP, uint32_t port);
 	void	Disconnect();
@@ -253,15 +243,13 @@ public:
 	{
 		s_JvCrypt.SetPublicKey(PublicKey);
 		s_JvCrypt.Init();
-
+		
 		s_wSendVal = 0;
 		s_wRcvVal = 0;
 		if (0 != PublicKey) s_bCryptionFlag = TRUE;
 		else s_bCryptionFlag = FALSE;
 	}
 #endif
-
-	//패킷 만들기 함수
 	static	void	MP_AddByte(uint8_t *dest, int& iOffset, uint8_t byte) { CopyMemory(dest+iOffset, &byte, 1); iOffset ++; }
 	static	void	MP_AddShort(uint8_t *dest, int& iOffset, int16_t value) { CopyMemory(dest+iOffset, &value, 2); iOffset += 2; }
 	static	void	MP_AddWord(uint8_t *dest, int& offset, uint16_t value) { CopyMemory(dest+offset, &value, 2); offset += 2; }
@@ -274,11 +262,10 @@ public:
 			CopyMemory(dest+iOffset, &(szString[0]), szString.size());
 			iOffset += szString.size();
 		}
-
 	}
-
+	
 	CAPISocket();
 	virtual ~CAPISocket();
 };
 
-#endif // !defined(AFX_APISOCKET_H__31D58152_3B8D_4CBD_BEB9_6BE23C4F0FFB__INCLUDED_)
+#endif

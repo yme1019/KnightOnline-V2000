@@ -131,7 +131,8 @@ bool CUIPartyOrForce::ReceiveMessage(CN3UIBase* pSender, uint32_t dwMsg)
 
 void CUIPartyOrForce::Render()
 {
-	if(false == m_bVisible) return;
+	if(false == m_bVisible) 
+		return;
 
 	CN3UIBase::Render();
 
@@ -174,7 +175,8 @@ bool CUIPartyOrForce::TargetByIndex(size_t iIndex)
 
 const __InfoPartyOrForce* CUIPartyOrForce::MemberInfoGetByID(int iID, int& iIndexResult)
 {
-	if(m_Members.empty()) return NULL;
+	if(m_Members.empty())
+		return NULL;
 
 	it_PartyOrForce it = m_Members.begin(), itEnd = m_Members.end();
 	iIndexResult = 0;
@@ -204,7 +206,8 @@ const __InfoPartyOrForce* CUIPartyOrForce::MemberInfoGetByIndex(size_t iIndex)
 
 CPlayerOther* CUIPartyOrForce::MemberGetByNearst(const __Vector3& vPosPlayer)
 {
-	if(m_Members.empty()) return false;
+	if(m_Members.empty()) 
+		return false;
 
 	float fDistMin = FLT_MAX, fDistTmp = 0;
 	CPlayerOther* pTarget = NULL;
@@ -249,7 +252,8 @@ const __InfoPartyOrForce* CUIPartyOrForce::MemberAdd(int iID, const std::string 
 
 bool CUIPartyOrForce::MemberRemove(int iID)
 {
-	if(m_Members.empty()) return false;
+	if(m_Members.empty()) 
+		return false;
 
 	it_PartyOrForce it = m_Members.begin(), itEnd = m_Members.end();
 	for(; it != itEnd; it++)

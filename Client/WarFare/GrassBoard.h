@@ -1,7 +1,3 @@
-// N3Board2DGrass.h: interface for the GrassBoard class.
-//
-//////////////////////////////////////////////////////////////////////
-
 #if !defined(AFX_GRASSBOARD_H__D53F0EC4_B777_49CD_BEE8_071AD4A1680E__INCLUDED_)
 #define AFX_GRASSBOARD_H__D53F0EC4_B777_49CD_BEE8_071AD4A1680E__INCLUDED_
 
@@ -24,34 +20,29 @@ protected:
 	typedef struct Grass_Info
 	{
 		__Matrix44	mtxWorld;
-		__Vector3	vPos;	//	풀의 위치(지도상의)
-		uint32_t		dwAlpColor;	//	풀의 알파
-		int			iTexIndex;	//	풀의 인덱스
+		__Vector3	vPos;	
+		uint32_t		dwAlpColor;	
+		int			iTexIndex;	
 	}Grass_Info;
-//	__VertexXyzColorT1 m_vRects[4];
 	Grass_Info		m_sGrassInfo[20];
 
 	int				m_nTexIndex;
-	uint8_t	m_ucTexIndex;	//	그림인덱스
-	uint8_t	m_ucTexNum;	//	풀의 갯수
+	uint8_t	m_ucTexIndex;	
+	uint8_t	m_ucTexNum;	
 
-//	float			m_fLeftPo;
-//	float			m_fTopPo;
 	__Vector3		m_vCenterPo;
 
 public:
-	uint32_t m_dwBoardType; // Board Type
+	uint32_t m_dwBoardType; 
 
-	float	m_fBrightmin;	//	unit full bright lengs
-	float	m_fBrightmax;	//	unit shadow lengs	
+	float	m_fBrightmin;	
+	float	m_fBrightmax;	
 
-	BOOL	m_bCamOut;	//	카메라의 범위를 벋어나 랜더 할 필요 없음(TRUE)
+	BOOL	m_bCamOut;	
 
-	BOOL	m_bGroundInfo;	//	현재 셀이 풀을 그릴수 있는지 확인
+	BOOL	m_bGroundInfo;	
 
 public:
-//	void TexSelectNum(int Texindex,uint8_t TexOrgIndex) {m_nTexIndex = Texindex, m_usTexIndex = TexOrgIndex;}
-//	BOOL ThisTexIsHave(uint8_t TexIndex) { return TexIndex & m_usTexIndex;}
 
 	void Init(__Vector3 vPos, uint32_t dwBoardType);
 	void Tick(CN3Terrain* pTerrain);
@@ -66,8 +57,6 @@ public:
 	uint32_t SetBrightLevel(float Level);
 	
 	void SetInfo(__Vector3 vBoardPosion,uint16_t usData);
-//	uint16_t GetLeft() {return m_vCenterPo.x;}
-//	uint16_t GetTop()  {return m_vCenterPo.z;}
 	__Vector3	GetPo() {return m_vCenterPo;}
 
 #ifdef _N3TOOL
@@ -84,4 +73,4 @@ protected:
 
 };
 
-#endif // !defined(AFX_GRASSBOARD_H__D53F0EC4_B777_49CD_BEE8_071AD4A1680E__INCLUDED_)
+#endif 

@@ -121,6 +121,3 @@ CN3Shape* CDungeonManager::PickWithShape(int iXScreen, int iYScreen, bool bMustH
 {
 	return m_pvsmgr.PickWithShape(iXScreen, iYScreen, bMustHaveEvent, pvPick);
 }
-
-
-

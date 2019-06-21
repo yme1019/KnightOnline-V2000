@@ -33,7 +33,8 @@ bool CUILoadingDlg::Load(HANDLE hFile)
 {
 	if(CN3UIBase::Load(hFile)==false) return false;
 
-	CN3UIString* pText = (CN3UIString*)(CN3UIBase::GetChildByID("Text_Version")); __ASSERT(pText, "NULL UI Component!!");
+	CN3UIString* pText = (CN3UIString*)(CN3UIBase::GetChildByID("Text_Version")); 
+	__ASSERT(pText, "pText NULL UI Component!!");
 	if(pText)
 	{
 		char szVersion[128];

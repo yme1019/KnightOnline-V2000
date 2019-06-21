@@ -1,13 +1,9 @@
-// UILoading.h: interface for the UILoading class.
-//
-//////////////////////////////////////////////////////////////////////
-
 #if !defined(AFX_UILoading_H__81E8BA13_2261_4A3D_9A94_BF0E7C49C4DD__INCLUDED_)
 #define AFX_UILoading_H__81E8BA13_2261_4A3D_9A94_BF0E7C49C4DD__INCLUDED_
 
 #if _MSC_VER > 1000
 #pragma once
-#endif // _MSC_VER > 1000
+#endif
 
 #include "N3UIBase.h"
 
@@ -28,4 +24,4 @@ public:
 	virtual void	Release();
 };
 
-#endif // !defined(AFX_UILoading_H__81E8BA13_2261_4A3D_9A94_BF0E7C49C4DD__INCLUDED_)
+#endif 

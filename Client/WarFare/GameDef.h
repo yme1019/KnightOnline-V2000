@@ -19,15 +19,11 @@
 #endif
 #include "shared/Packet.h"
 
-const int CURRENT_VERSION = 1298;
+const int CURRENT_VERSION = 2100;
 
 const float PACKET_INTERVAL_MOVE = 1.5f;				
 const float PACKET_INTERVAL_ROTATE = 4.0f;
 const float PACKET_INTERVAL_REQUEST_TARGET_HP = 2.0f;
-
-
-#define N3_FORMAT_VER_1068 0x00000001
-#define N3_FORMAT_VER_1298 0x00000002
 
 enum ZoneFlags
 {
@@ -569,12 +565,12 @@ struct __InfoPartyOrForce
 
 enum e_PartyStatus { PARTY_STATUS_DOWN_HP = 1, PARTY_STATUS_DOWN_ETC = 2 };
 
-struct __InfoPartyBBS // 파티 지원 게시판 구조체..
+struct __InfoPartyBBS 
 {
-	std::string szID;			// 파티 이름 문자열
-	int			iID;			// 파티원 ID
+	std::string szID;			
+	int			iID;			
 	int			iLevel;			// Level
-	e_Class		eClass;			// 직업
+	e_Class		eClass;			
 	int			iMemberCount;
 
 	void Init()
@@ -1466,7 +1462,7 @@ const int	FXID_SWORD_LIGHTNING_TARGET = 10033;
 const int	FXID_SWORD_POISON_MAIN		= 10027;
 const int	FXID_SWORD_POISON_TAIL		= 10028;
 const int	FXID_SWORD_POISON_TARGET	= 10034;
-//const int	FXID_GROUND_TARGET = 10035;
+
 const int	FXID_REGION_TARGET_EL_ROGUE		= 10035;
 const int	FXID_REGION_TARGET_EL_WIZARD	= 10036;
 const int	FXID_REGION_TARGET_EL_PRIEST	= 10037;
@@ -1529,5 +1525,4 @@ enum e_Cursor
 	CURSOR_UNKNOWN = 0xffffffff
 };
 
-#endif // end of #define __GAME_DEF_H_
-
+#endif 

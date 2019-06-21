@@ -1,7 +1,3 @@
-// CountableItemEditDlg.h: interface for the CCountableItemEditDlg class.
-//
-//////////////////////////////////////////////////////////////////////
-
 #if !defined(AFX_COUNTABLEITEMEDITDLG_H__55E83755_6471_4A3D_84D7_857B0FF88833__INCLUDED_)
 #define AFX_COUNTABLEITEMEDITDLG_H__55E83755_6471_4A3D_84D7_857B0FF88833__INCLUDED_
 
@@ -19,9 +15,6 @@
 #include "GameProcedure.h"
 
 #include "GameDef.h"
-
-
-//////////////////////////////////////////////////////////////////////
 
 class CCountableItemEditDlg   : public CN3UIBase  
 {
@@ -44,8 +37,8 @@ public:
 	bool Load(HANDLE hFile);
 	void				SetVisibleWithNoSound(bool bVisible, bool bWork = false, bool bReFocus = false);
 	void				SetVisible(bool bVisible);
-	int					GetQuantity(); // "edit_trade" Edit Control 에서 정수값을 얻오온다..
-	void				SetQuantity(int iQuantity); // "edit_trade" Edit Control 에서 정수값을 문자열로 세팅한다..
+	int					GetQuantity(); // "edit_trade" Edit Control 
+	void				SetQuantity(int iQuantity); // "edit_trade" Edit Control
 
 	CCountableItemEditDlg();
 	virtual ~CCountableItemEditDlg();
@@ -62,4 +55,4 @@ public:
 	e_UIWND_DISTRICT	GetCallerWndDistrict()	{	return m_eCallerWndDistrict;	}
 };
 
-#endif // !defined(AFX_COUNTABLEITEMEDITDLG_H__55E83755_6471_4A3D_84D7_857B0FF88833__INCLUDED_)
+#endif 

@@ -1,4 +1,4 @@
-# Knight Online (V2000)
+# Knight Online (v2100)
 
 Usko da Birlikte Geliştirelim // Let Usko Develop Together.
 
@@ -20,6 +20,8 @@ We may deviate in some minor aspects where it makes sense to fix, for example, U
 
 ------------------------------------------------------------------------------------------------------------------------------------
 Usko Client : http://www.mediafire.com/file/jvz3j3g3d81d9ec/KnightOnlineEn_Usko_V2000.rar/file
+------------------------------------------------------------------------------------------------------------------------------------
+Patch : http://www.mediafire.com/file/d98xs74949rscpt/KnightOnlineEn_Patch.rar/file
 ------------------------------------------------------------------------------------------------------------------------------------
 DB : http://www.mediafire.com/file/x6x145z4zqwbhzl/KO_1299.rar/file
 ------------------------------------------------------------------------------------------------------------------------------------

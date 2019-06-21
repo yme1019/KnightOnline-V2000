@@ -49,11 +49,8 @@ CUILogIn::~CUILogIn()
 
 bool CUILogIn::ReceiveMessage(CN3UIBase* pSender, uint32_t dwMsg)
 {
-	if (NULL == pSender) return false;
-
-	//s_CameraData.vp;  
-	//uint32_t mm = s_CameraData.vp.Height;
-	//uint32_t ss = s_CameraData.vp.Width;	
+	if (NULL == pSender) 
+		return false;
 
 	if (dwMsg == UIMSG_BUTTON_CLICK)
 	{
@@ -134,20 +131,34 @@ bool CUILogIn::Load(HANDLE hFile)
 
 	if (m_pGroup_LogIn)
 	{
-		m_pBtn_LogIn = (CN3UIButton*)m_pGroup_LogIn->GetChildByID("Btn_Login");		__ASSERT(m_pBtn_LogIn, "NULL UI Component!!");
-		m_pBtn_Cancel = (CN3UIButton*)m_pGroup_LogIn->GetChildByID("Btn_Cancel");	__ASSERT(m_pBtn_Cancel, "NULL UI Component!!");
-		m_pBtn_Option = (CN3UIButton*)m_pGroup_LogIn->GetChildByID("Btn_Option");	__ASSERT(m_pBtn_Option, "NULL UI Component!!");
-		m_pBtn_Join = (CN3UIButton*)m_pGroup_LogIn->GetChildByID("Btn_Join");		__ASSERT(m_pBtn_Join, "NULL UI Component!!");
+		m_pBtn_LogIn = (CN3UIButton*)m_pGroup_LogIn->GetChildByID("Btn_Login");		
+		__ASSERT(m_pBtn_LogIn, "m_pBtn_LogIn NULL UI Component!!");
+		
+		m_pBtn_Cancel = (CN3UIButton*)m_pGroup_LogIn->GetChildByID("Btn_Cancel");	
+		__ASSERT(m_pBtn_Cancel, "m_pBtn_Cancel NULL UI Component!!");
+		
+		m_pBtn_Option = (CN3UIButton*)m_pGroup_LogIn->GetChildByID("Btn_Option");	
+		__ASSERT(m_pBtn_Option, "m_pBtn_Option NULL UI Component!!");
+		
+		m_pBtn_Join = (CN3UIButton*)m_pGroup_LogIn->GetChildByID("Btn_Join");		
+		__ASSERT(m_pBtn_Join, "m_pBtn_Join NULL UI Component!!");
 
-		m_pEdit_id = (CN3UIEdit*)m_pGroup_LogIn->GetChildByID("Edit_ID");			__ASSERT(m_pEdit_id, "NULL UI Component!!");
-		m_pEdit_pw = (CN3UIEdit*)m_pGroup_LogIn->GetChildByID("Edit_PW");			__ASSERT(m_pEdit_pw, "NULL UI Component!!");
+		m_pEdit_id = (CN3UIEdit*)m_pGroup_LogIn->GetChildByID("Edit_ID");			
+		__ASSERT(m_pEdit_id, "m_pEdit_id NULL UI Component!!");
+		
+		m_pEdit_pw = (CN3UIEdit*)m_pGroup_LogIn->GetChildByID("Edit_PW");			
+		__ASSERT(m_pEdit_pw, "m_pEdit_pw NULL UI Component!!");
 
-		//m_pImg_GradeLogo = m_pGroup_LogIn->GetChildByID("Img_Grade");	__ASSERT(m_pImg_GradeLogo, "NULL UI Component!!");
 	}
 
-	m_pText_Rights = GetChildByID("Text_Rights");	__ASSERT(m_pText_Rights, "NULL UI Component!!");
-	m_pImg_MGameLogo = GetChildByID("Img_MGame");	__ASSERT(m_pImg_MGameLogo, "NULL UI Component!!");
-	m_pImg_DaumLogo = GetChildByID("Img_Daum");		__ASSERT(m_pImg_DaumLogo, "NULL UI Component!!");
+	m_pText_Rights = GetChildByID("Text_Rights");	
+	__ASSERT(m_pText_Rights, "m_pText_Rights NULL UI Component!!");
+	
+	m_pImg_MGameLogo = GetChildByID("Img_MGame");	
+	__ASSERT(m_pImg_MGameLogo, "m_pImg_MGameLogo NULL UI Component!!");
+	
+	m_pImg_DaumLogo = GetChildByID("Img_Daum");		
+	__ASSERT(m_pImg_DaumLogo, "m_pImg_DaumLogo NULL UI Component!!");
 
 	if (m_pText_Rights) m_pText_Rights->SetVisible(false);
 	if (m_pImg_MGameLogo) m_pImg_MGameLogo->SetVisible(false);
@@ -158,11 +169,15 @@ bool CUILogIn::Load(HANDLE hFile)
 	GetChildByID("Group_Notice_3")->SetVisible(false);
 	GetChildByID("premium")->SetVisible(false);
 
-	m_pGroup_ServerList = GetChildByID("Group_ServerList");		__ASSERT(m_pGroup_ServerList, "NULL UI Component!!");
+	m_pGroup_ServerList = GetChildByID("Group_ServerList");		
+	__ASSERT(m_pGroup_ServerList, "m_pGroup_ServerList NULL UI Component!!");
 	if (m_pGroup_ServerList)
 	{
-		m_pList_Server = (CN3UIList*)(m_pGroup_ServerList->GetChildByID("List_Server"));	__ASSERT(m_pList_Server, "NULL UI Component!!");
-		m_pBtn_Connect = (CN3UIButton*)m_pGroup_ServerList->GetChildByID("Btn_Connect");	__ASSERT(m_pBtn_Connect, "NULL UI Component!!");
+		m_pList_Server = (CN3UIList*)(m_pGroup_ServerList->GetChildByID("List_Server"));	
+		__ASSERT(m_pList_Server, "m_pList_Server NULL UI Component!!");
+		
+		m_pBtn_Connect = (CN3UIButton*)m_pGroup_ServerList->GetChildByID("Btn_Connect");	
+		__ASSERT(m_pBtn_Connect, "m_pBtn_Connect NULL UI Component!!");
 
 		m_pGroup_ServerList->SetVisible(false);
 	}
@@ -394,7 +409,8 @@ bool CUILogIn::OnKeyPress(int iKey)
 		{
 		case SDL_SCANCODE_UP://DIK_UP:
 		{
-			if (NULL == m_pList_Server) return false;
+			if (NULL == m_pList_Server) 
+				return false;
 
 			int iIndex = m_pList_Server->GetCurSel();
 
@@ -404,7 +420,8 @@ bool CUILogIn::OnKeyPress(int iKey)
 		return true;
 		case SDL_SCANCODE_DOWN://DIK_DOWN:
 		{
-			if (NULL == m_pList_Server) return false;
+			if (NULL == m_pList_Server) 
+				return false;
 
 			int iIndex = m_pList_Server->GetCurSel();
 			int iCnt = m_pList_Server->GetCount();

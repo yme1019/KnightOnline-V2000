@@ -1,13 +1,9 @@
-// UIPartyBBS.h: interface for the CUIPartyBBS class.
-//
-//////////////////////////////////////////////////////////////////////
-
 #if !defined(AFX_UIPartyBBS_H__7B2732B7_C9CA_46A3_89BC_C59934ED3F13__INCLUDED_)
 #define AFX_UIPartyBBS_H__7B2732B7_C9CA_46A3_89BC_C59934ED3F13__INCLUDED_
 
 #if _MSC_VER > 1000
 #pragma once
-#endif // _MSC_VER > 1000
+#endif 
 
 #include "GameDef.h"
 #include "PacketDef.h"
@@ -32,9 +28,9 @@ protected:
 	class CN3UIString*		m_pText_Page;
 	class CN3UIString*		m_pText[69];
 
-	std::list<__InfoPartyBBS>	m_Datas; // BBS Data
-	int			m_iCurPage; // 현재 페이지..
-	int			m_iMaxPage;	// 총 페이지..
+	std::list<__InfoPartyBBS>	m_Datas;
+	int			m_iCurPage; 
+	int			m_iMaxPage;	
 	int			m_iCurIndex;
 	bool		m_bProcessing;
 	float		m_fTime;
@@ -66,4 +62,4 @@ public:
 	virtual ~CUIPartyBBS();
 };
 
-#endif // !defined(AFX_UIPartyBBS_H__7B2732B7_C9CA_46A3_89BC_C59934ED3F13__INCLUDED_)
+#endif

@@ -19,13 +19,17 @@ bool CUIWarp::Load(HANDLE hFile)
 	if(CN3UIBase::Load(hFile)==false) return false;
 
 	m_pBtn_Ok = (CN3UIButton*)GetChildByID("Btn_Ok");							
-	__ASSERT(m_pBtn_Ok, "NULL UI Component!!");
+	__ASSERT(m_pBtn_Ok, "m_pBtn_Ok NULL UI Component!!");
+	
 	m_pBtn_Cancel = (CN3UIButton*)GetChildByID("Btn_Cancel");					
-	__ASSERT(m_pBtn_Cancel, "NULL UI Component!!");
+	__ASSERT(m_pBtn_Cancel, "m_pBtn_Cancel NULL UI Component!!");
+	
 	m_pList_Infos = (CN3UIList*)GetChildByID("List_Infos");						
-	__ASSERT(m_pList_Infos, "NULL UI Component!!");
+	__ASSERT(m_pList_Infos, "m_pList_Infos NULL UI Component!!");
+	
 	m_pText_Agreement = (CN3UIString*)(this->GetChildByID("Text_Agreement"));	
-	__ASSERT(m_pText_Agreement, "NULL UI Component!!!");
+	__ASSERT(m_pText_Agreement, "m_pText_Agreement NULL UI Component!!!");
+	
 	return true;
 }
 

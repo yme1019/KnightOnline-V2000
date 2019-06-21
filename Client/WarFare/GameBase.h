@@ -3,7 +3,7 @@
 
 #if _MSC_VER > 1000
 #pragma once
-#endif // _MSC_VER > 1000
+#endif
 
 #include "N3Base.h"
 #include "GameDef.h"
@@ -60,4 +60,4 @@ public:
 	virtual ~CGameBase();
 };
 
-#endif // !defined(AFX_N3GAMEBASE_H__5F0720A7_AFF6_4AB5_B469_701AA2935158__INCLUDED_)
+#endif

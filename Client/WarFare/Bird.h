@@ -1,13 +1,9 @@
-// Bird.h: interface for the CBird class.
-//
-//////////////////////////////////////////////////////////////////////
-
 #if !defined(AFX_BIRD_H__409CEF6D_6577_4CFB_90C9_6A8AA710D298__INCLUDED_)
 #define AFX_BIRD_H__409CEF6D_6577_4CFB_90C9_6A8AA710D298__INCLUDED_
 
 #if _MSC_VER > 1000
 #pragma once
-#endif // _MSC_VER > 1000
+#endif 
 
 #include "N3Base.h"
 
@@ -23,20 +19,18 @@ public:
 // Attributes
 public:
 protected:
-	// 파일에서 읽어오는 정보
 	CN3Shape*	m_pShape;		// Shape pointer
-	__Vector3	m_vPivot;		// 중심점(중심점에서 반경 m_fRadius만큼 범위내에서 움직인다.
-	float		m_fRadius;		// 반경
+	__Vector3	m_vPivot;		
+	float		m_fRadius;		
 
-//	__Vector3	m_vVelocity;	// 현재 속도(스피드+방향)
-	float		m_fRadianSpeed;		// 속력
-	float		m_fRadian;		// 현재 타원의 위치각
+	float		m_fRadianSpeed;		
+	float		m_fRadian;		
 	float		m_fFactor1,	m_fFactor2;
 	float		m_fFactorSpeed1,	m_fFactorSpeed2;
 
-	float		m_fRadiusY;		// 높이 반경
-	float		m_fFactorY1, m_fFactorY2;	// 높이 변화 요소
-	float		m_fFactorYSpeed1, m_fFactorYSpeed2;	// 높이 변화 요소 변화율..
+	float		m_fRadiusY;		
+	float		m_fFactorY1, m_fFactorY2;	
+	float		m_fFactorYSpeed1, m_fFactorYSpeed2;	
 
 	CN3SndObj*	m_pSnd;
 	float		m_fSndInterval;
@@ -52,4 +46,4 @@ protected:
 
 };
 
-#endif // !defined(AFX_BIRD_H__409CEF6D_6577_4CFB_90C9_6A8AA710D298__INCLUDED_)
+#endif

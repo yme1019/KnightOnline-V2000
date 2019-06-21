@@ -36,16 +36,17 @@ void CUINPCEvent::Release()
 
 bool CUINPCEvent::Load(HANDLE hFile)
 {
-	if(CN3UIBase::Load(hFile)==false) return false;
+	if(CN3UIBase::Load(hFile)==false) 
+		return false;
 
 	m_pBtn_Repair	= (CN3UIButton*)GetChildByID("Btn_Repair");		
-	__ASSERT(m_pBtn_Repair, "NULL UI Component!!");
+	__ASSERT(m_pBtn_Repair, "m_pBtn_Repair NULL UI Component!!");
 
 	m_pText_Repair	= (CN3UIString*)GetChildByID("Text_Repair");	
-	__ASSERT(m_pText_Repair, "NULL UI Component!!");
+	__ASSERT(m_pText_Repair, "m_pText_Repair NULL UI Component!!");
 
 	m_pText_Title	= (CN3UIString*)GetChildByID("Text_Title");		
-	__ASSERT(m_pText_Title, "NULL UI Component!!");
+	__ASSERT(m_pText_Title, "m_pText_Title NULL UI Component!!");
 
 	return true;
 }
@@ -84,19 +85,7 @@ bool CUINPCEvent::ReceiveMessage(CN3UIBase* pSender, uint32_t dwMsg)
 			CGameProcedure::s_pProcMain->m_pUIInventory->Open(INV_STATE_REPAIR);
 
 		}
-
-/*		if(pSender->m_szID == "Btn_Change")
-		{
-			Close();
-			CGameProcedure::s_pProcMain->m_pUIItemREDlg->Open();
-		}
-
-		if(pSender->m_szID == "Btn_Talk")
-		{
-			Close();
-			CGameProcedure::s_pProcMain->m_pUINpcTalk->Open(m_iIDTarget);
-		}*/
-
+		
 		if(pSender->m_szID == "btn_close")
 			Close();
 	}

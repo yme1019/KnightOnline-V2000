@@ -1,13 +1,9 @@
-// UIPerTradeDlg.h: interface for the CUIPerTradeDlg class.
-//
-//////////////////////////////////////////////////////////////////////
-
 #if !defined(AFX_UIPERTRADEDLG_H__8C9B06AA_B16D_4135_B198_4AB3C6B09FEA__INCLUDED_)
 #define AFX_UIPERTRADEDLG_H__8C9B06AA_B16D_4135_B198_4AB3C6B09FEA__INCLUDED_
 
 #if _MSC_VER > 1000
 #pragma once
-#endif // _MSC_VER > 1000
+#endif
 
 #include "N3UIBase.h"
 #include "N3UIArea.h"
@@ -15,9 +11,6 @@
 
 #include "GameDef.h"
 #include "N3UIWndBase.h"
-
-
-//////////////////////////////////////////////////////////////////////
 
 class CGameProcMain;
 
@@ -28,7 +21,6 @@ class CUIPerTradeDlg    : public CN3UIWndBase
 public:
 	CSubProcPerTrade*	m_pSubProcPerTrade;
 
-// 직접 접근해야 할 객체 참조 포인터
 	__IconItemSkill*		m_pPerTradeMy[MAX_ITEM_PER_TRADE];
 	__IconItemSkill*		m_pPerTradeOther[MAX_ITEM_PER_TRADE];
 	__IconItemSkill*		m_pPerTradeInv[MAX_ITEM_INVENTORY];
@@ -36,7 +28,7 @@ public:
 	int						m_iBackupiOrder[MAX_ITEM_PER_TRADE];
 
 	CUIImageTooltipDlg*		m_pUITooltipDlg;
-	int						m_iBackupiCount;	// 전에 옮긴 화살등의 갯수..
+	int						m_iBackupiCount;	
 
 	CN3UIString*			m_pStrMyGold;
 
@@ -82,4 +74,4 @@ public:
 };
 
 
-#endif // !defined(AFX_UIPERTRADEDLG_H__8C9B06AA_B16D_4135_B198_4AB3C6B09FEA__INCLUDED_)
+#endif

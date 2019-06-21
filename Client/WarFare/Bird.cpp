@@ -99,11 +99,20 @@ int CBird::LoadBird(const std::string& szFN)
 	char szRrcName[_MAX_PATH];
 	float	fSpeed = 0.0f;
 
-	int result = fscanf(stream, "ResourceName = %s\n", szRrcName);			__ASSERT(result != EOF, "肋给等 Machine 技泼 颇老");
-	result = fscanf(stream, "Pivot = %f %f %f\n", &(m_vPivot.x), &(m_vPivot.y), &(m_vPivot.z));	__ASSERT(result != EOF, "肋给等 Machine 技泼 颇老");
-	result = fscanf(stream, "Radius = %f\n", &m_fRadius);					__ASSERT(result != EOF, "肋给等 Machine 技泼 颇老");
-	result = fscanf(stream, "RadiusY = %f\n", &m_fRadiusY);					__ASSERT(result != EOF, "肋给等 Machine 技泼 颇老");
-	result = fscanf(stream, "Speed = %f\n", &fSpeed);						__ASSERT(result != EOF, "肋给等 Machine 技泼 颇老");
+	int result = fscanf(stream, "ResourceName = %s\n", szRrcName);			
+	__ASSERT(result != EOF, "肋给等 Machine 技泼 颇老");
+	
+	result = fscanf(stream, "Pivot = %f %f %f\n", &(m_vPivot.x), &(m_vPivot.y), &(m_vPivot.z));	
+	__ASSERT(result != EOF, "肋给等 Machine 技泼 颇老");
+	
+	result = fscanf(stream, "Radius = %f\n", &m_fRadius);					
+	__ASSERT(result != EOF, "肋给等 Machine 技泼 颇老");
+	
+	result = fscanf(stream, "RadiusY = %f\n", &m_fRadiusY);					
+	__ASSERT(result != EOF, "肋给等 Machine 技泼 颇老");
+	
+	result = fscanf(stream, "Speed = %f\n", &fSpeed);						
+	__ASSERT(result != EOF, "肋给等 Machine 技泼 颇老");
 
 	fclose(stream);
 

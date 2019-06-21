@@ -76,35 +76,43 @@ bool CUIQuestTalk::ReceiveMessage(CN3UIBase *pSender, uint32_t dwMsg)
 
 bool CUIQuestTalk::Load(HANDLE hFile)
 {
-	if(CN3UIBase::Load(hFile)==false) return false;
+	if(CN3UIBase::Load(hFile)==false) 
+		return false;
 
-	m_pTextTalk	= (CN3UIString*)(this->GetChildByID("Text_Talk"));	__ASSERT(m_pTextTalk, "NULL UI Component!!!");
-//	m_pBtnOk	= (CN3UIButton*)(this->GetChildByID("Btn_Ok"));		__ASSERT(m_pBtnOk, "NULL UI Component!!!");
-	m_pBtnOk	= (CN3UIButton*)(this->GetChildByID("btn_Ok_center"));		__ASSERT(m_pBtnOk, "NULL UI Component!!!");
+	m_pTextTalk	= (CN3UIString*)(this->GetChildByID("Text_Talk"));	
+	__ASSERT(m_pTextTalk, "m_pTextTalk NULL UI Component!!!");
+	
+	m_pBtnOk	= (CN3UIButton*)(this->GetChildByID("btn_Ok_center"));		
+	__ASSERT(m_pBtnOk, "m_pBtnOk NULL UI Component!!!");
 
 	// NOTE(srmeier): new stuff
 	CN3UIButton* m_pBtnClose = (CN3UIButton*)(this->GetChildByID("btn_close"));
-	if (m_pBtnClose) {
+	if (m_pBtnClose) 
+	{
 		m_pBtnClose->SetVisible(false);
 	}
 
 	CN3UIButton* m_pBtnUpperEvent = (CN3UIButton*)(this->GetChildByID("btn_UpperEvent"));
-	if (m_pBtnUpperEvent) {
+	if (m_pBtnUpperEvent) 
+	{
 		m_pBtnUpperEvent->SetVisible(false);
 	}
 
 	CN3UIButton* m_pBtnNext = (CN3UIButton*)(this->GetChildByID("btn_Next"));
-	if (m_pBtnNext) {
+	if (m_pBtnNext) 
+	{
 		m_pBtnNext->SetVisible(false);
 	}
 
 	CN3UIButton* m_pBtnOkRight = (CN3UIButton*)(this->GetChildByID("btn_Ok_right"));
-	if (m_pBtnOkRight) {
+	if (m_pBtnOkRight) 
+	{
 		m_pBtnOkRight->SetVisible(false);
 	}
 
 	CN3UIButton* m_pBtnPre = (CN3UIButton*)(this->GetChildByID("btn_Pre"));
-	if (m_pBtnPre) {
+	if (m_pBtnPre) 
+	{
 		m_pBtnPre->SetVisible(false);
 	}
 
@@ -122,7 +130,6 @@ bool CUIQuestTalk::OnKeyPress(int iKey)
 		ReceiveMessage(m_pBtnOk, UIMSG_BUTTON_CLICK);
 		return true;
 	}
-
 	return CN3UIBase::OnKeyPress(iKey);
 }
 

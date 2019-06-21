@@ -1,7 +1,3 @@
-// UIPartyBBSSelector.h: interface for the CUIPartyBBSSelector class.
-//
-//////////////////////////////////////////////////////////////////////
-
 #if !defined(AFX_UIPARTYBBSSELECTOR_H__CF79ECBE_7FBE_4251_A740_E6AD08881785__INCLUDED_)
 #define AFX_UIPARTYBBSSELECTOR_H__CF79ECBE_7FBE_4251_A740_E6AD08881785__INCLUDED_
 
@@ -32,4 +28,4 @@ public:
 
 };
 
-#endif // !defined(AFX_UIPARTYBBSSELECTOR_H__CF79ECBE_7FBE_4251_A740_E6AD08881785__INCLUDED_)
+#endif 

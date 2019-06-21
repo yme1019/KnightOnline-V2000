@@ -95,13 +95,13 @@ bool CUIMessageWnd::Load(HANDLE hFile)
 		return false;
 
 	m_pChatOut = (CN3UIString*)GetChildByID("text_message");	
-	__ASSERT(m_pChatOut, "NULL UI Component!!");
+	__ASSERT(m_pChatOut, "m_pChatOut NULL UI Component!!");
 
 	m_pScrollbar = (CN3UIScrollBar*)GetChildByID("scroll");		
-	__ASSERT(m_pScrollbar, "NULL UI Component!!");
+	__ASSERT(m_pScrollbar, "m_pScrollbar NULL UI Component!!");
 
 	m_pBtn_Fold = (CN3UIBase*)GetChildByID("btn_off");	
-	__ASSERT(m_pBtn_Fold, "NULL UI Component!!");
+	__ASSERT(m_pBtn_Fold, "m_pBtn_Fold NULL UI Component!!");
 
 	m_rcChatOutRegion = m_pChatOut->GetRegion();
 	CreateLines();
@@ -195,7 +195,6 @@ void CUIMessageWnd::AddMsg(const std::string& szString, D3DCOLOR color)
 
 	while (m_LineBuffer.size() > MAX_CHAT_LINES && 0 < iCurLinePos)
 	{
-		// 한줄 지우기
 		__ChatInfo* pTemp = m_LineBuffer.front();
 		if (pTemp) delete pTemp;
 		m_LineBuffer.pop_front();
@@ -416,7 +415,8 @@ bool CUIMessageWnd2::Load(HANDLE hFile)
 
 bool CUIMessageWnd2::ReceiveMessage(CN3UIBase* pSender, uint32_t dwMsg)
 {
-	if (NULL == pSender) return false;
+	if (NULL == pSender) 
+		return false;
 
 	if (dwMsg == UIMSG_BUTTON_CLICK)
 	{

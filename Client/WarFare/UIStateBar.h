@@ -1,13 +1,9 @@
-// UIStateBar.h: interface for the CUIStateBar class.
-//
-//////////////////////////////////////////////////////////////////////
-
 #if !defined(AFX_UIStateBar_H__C1BBB503_F9E5_43BB_93CB_C542AC016F85__INCLUDED_)
 #define AFX_UIStateBar_H__C1BBB503_F9E5_43BB_93CB_C542AC016F85__INCLUDED_
 
 #if _MSC_VER > 1000
 #pragma once
-#endif // _MSC_VER > 1000
+#endif
 
 #include "N3UIBase.h"
 
@@ -42,9 +38,8 @@ protected:
 	CN3UIProgress*	m_pProgress_ExpC;
 	CN3UIProgress*	m_pProgress_ExpP;
 
-	// 미니맵...
 	CN3UIBase*		m_pGroup_MiniMap;
-	CN3UIImage*		m_pImage_Map; // 이 이미지에 미니맵 텍스처를 적용시킨다..
+	CN3UIImage*		m_pImage_Map; 
 	CN3UIButton*	m_pBtn_ZoomIn;
 	CN3UIButton*	m_pBtn_ZoomOut;
 	CN3UIButton*	m_pBtn_Quest;
@@ -60,11 +55,9 @@ protected:
 	__Vector3		m_vPosPlayer;
 	__Vector3		m_vViewPos;
 
-	__VertexTransformedColor	m_vArrows[6]; // 플레이어 위치 화살표..
+	__VertexTransformedColor	m_vArrows[6]; 
 	std::list<__PositionInfo>	m_Positions;
-	std::list<__PositionInfo>	m_PositionsTop; // 맨 위에 그릴 위치덜..
-
-	//컬려있는 마법스킬 표시하기..
+	std::list<__PositionInfo>	m_PositionsTop; 
 	std::list<__DurationMagicImg*> m_pMagic;
 	
 // Attributes
@@ -88,9 +81,9 @@ public:
 	void ZoomSet(float fZoom);
 	void PositionInfoAdd(int iID, const __Vector3& vPos, D3DCOLOR crID, bool bDrawTop);
 	void PositionInfoClear();
-	bool LoadMap(const std::string& szMiniMapFN, float fMapSizeX, float fMapSizeZ); // 미니맵 비트맵 파일 이름, 매의 너비 길이..(Meter);
+	bool LoadMap(const std::string& szMiniMapFN, float fMapSizeX, float fMapSizeZ);
 	
-	bool	ReceiveMessage(CN3UIBase* pSender, uint32_t dwMsg); // 메시지를 받는다.. 보낸놈, msg
+	bool	ReceiveMessage(CN3UIBase* pSender, uint32_t dwMsg); 
 
 	virtual void	Tick();
 	virtual void	Render(); // 미니맵 렌더링..
@@ -102,7 +95,4 @@ public:
 
 };
 
-#endif // !defined(AFX_UIStateBar_H__C1BBB503_F9E5_43BB_93CB_C542AC016F85__INCLUDED_)
-
-
-
+#endif

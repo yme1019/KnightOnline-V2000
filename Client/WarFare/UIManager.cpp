@@ -18,7 +18,7 @@
 static char THIS_FILE[]=__FILE__;
 #endif
 
-CUIManager::__RenderStateForUI CUIManager::s_sRSFU; // RenderStateForUI
+CUIManager::__RenderStateForUI CUIManager::s_sRSFU;
 
 CUIManager::CUIManager()
 {

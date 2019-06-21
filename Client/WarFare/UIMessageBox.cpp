@@ -51,25 +51,25 @@ bool CUIMessageBox::Load(HANDLE hFile)
 		return false;
 	
 	m_pBtn_OK = (CN3UIButton*)GetChildByID("Btn_OK"); 
-	__ASSERT(m_pBtn_OK, "NULL UI Component!!");
+	__ASSERT(m_pBtn_OK, "m_pBtn_OK NULL UI Component!!");
 
 	m_pBtn_Yes = (CN3UIButton*)GetChildByID("Btn_Yes");
-	__ASSERT(m_pBtn_Yes, "NULL UI Component!!");
+	__ASSERT(m_pBtn_Yes, "m_pBtn_Yes NULL UI Component!!");
 
 	m_pBtn_No = (CN3UIButton*)GetChildByID("Btn_No");
-	__ASSERT(m_pBtn_No, "NULL UI Component!!");
+	__ASSERT(m_pBtn_No, "m_pBtn_No NULL UI Component!!");
 
 	m_pBtn_Cancel = (CN3UIButton*)GetChildByID("Btn_Cancel"); 
-	__ASSERT(m_pBtn_Cancel, "NULL UI Component!!");
+	__ASSERT(m_pBtn_Cancel, "m_pBtn_Cancel NULL UI Component!!");
 
 	m_pText_Message = (CN3UIString*)GetChildByID("Text_Message");
-	__ASSERT(m_pText_Message, "NULL UI Component!!");
+	__ASSERT(m_pText_Message, "m_pText_Message NULL UI Component!!");
 
 	m_pText_Title = (CN3UIString*)GetChildByID("Text_Title"); 
-	__ASSERT(m_pText_Title, "NULL UI Component!!");
+	__ASSERT(m_pText_Title, "m_pText_Title NULL UI Component!!");
 
 	m_pEdit_Common = (CN3UIEdit*)GetChildByID("Edit_Common"); 
-	__ASSERT(m_pEdit_Common, "NULL UI Component!!");
+	__ASSERT(m_pEdit_Common, "m_pEdit_Common NULL UI Component!!");
 
 	return true;
 }

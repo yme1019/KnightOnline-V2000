@@ -69,12 +69,13 @@ void CUIQuestMenu::InitBase(void)
 
 bool CUIQuestMenu::Load(HANDLE hFile)
 {
-	if(CN3UIBase::Load(hFile)==false) return false;
+	if(CN3UIBase::Load(hFile)==false) 
+		return false;
 
 	m_pTextSample	= (CN3UIString*)(this->GetChildByID("Text_Menu"));
-	__ASSERT(m_pTextSample, "NULL UI Component!!!");
+	__ASSERT(m_pTextSample, "m_pTextSample NULL UI Component!!!");
 	m_pTextTitle	= (CN3UIString*)(this->GetChildByID("Text_Title"));
-	__ASSERT(m_pTextTitle, "NULL UI Component!!!");
+	__ASSERT(m_pTextTitle, "m_pTextTitle NULL UI Component!!!");
 
 	// NOTE: grabing the new stuff
 	m_pBtnClose   = (CN3UIButton*)GetChildByID("btn_close");
