@@ -311,14 +311,10 @@ BOOL CN3TableBase<Type>::LoadFromFile(const std::string& szFN)
 	::ReadFile(hFile, pDatas, dwSizeLow, &dwRWC, NULL);
 	CloseHandle(hFile); 
 
-	uint16_t key_r;
-	uint16_t key_c1;
-	uint16_t key_c2;
-
-	// 1299
-	key_r = 0x0816;
-	key_c1 = 0x6081;
-	key_c2 = 0x1608;
+	// v2000
+	uint16_t key_r = 0x0418;
+	uint16_t key_c1 = 0x8041;
+	uint16_t key_c2 = 0x1804;
 	for (uint32_t i = 0; i < dwSizeLow; i++)
 	{
 		uint8_t byData = pDatas[i] ^ (key_r >> 8);
